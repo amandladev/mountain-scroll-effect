@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Parallax Scroll - Solo HTML CSS & JS</title>
+</head>
+<body>
+    <section class="zoom">
+        <img src="img/mountain1.png" id="mountain1">
+        <img src="img/mountain2.png" id="mountain2">
+        <img src="img/text.png" id="text">
+    </section>
+    <section class="content">
+        <h2> Sergio Antonio Reyes Curotto
+        </h2>
+        <h4> +51 922125124 </h4>
+        <h4> sreyescurotto@gmail.com</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sit vitae, quis neque maxime numquam cupiditate facere officiis consequatur ratione rerum molestiae at accusantium 
+            culpa perferendis reprehenderit. Harum, optio ullam?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sit vitae, quis neque maxime numquam cupiditate facere officiis consequatur ratione rerum molestiae at accusantium 
+            culpa perferendis reprehenderit. Harum, optio ullam?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sit vitae, quis neque maxime numquam cupiditate facere officiis consequatur ratione rerum molestiae at accusantium 
+            culpa perferendis reprehenderit. Harum, optio ullam?<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sit vitae, quis neque maxime numquam cupiditate facere officiis consequatur ratione rerum molestiae at accusantium 
+            culpa perferendis reprehenderit. Harum, optio ullam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sit vitae, quis neque maxime numquam cupiditate facere officiis consequatur ratione rerum molestiae at accusantium 
+            culpa perferendis reprehenderit. Harum, optio ullam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sit vitae, quis neque maxime numquam cupiditate facere officiis consequatur ratione rerum molestiae at accusantium 
+            culpa perferendis reprehenderit. Harum, optio ullam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sit vitae, quis neque maxime numquam cupiditate facere officiis consequatur ratione rerum molestiae at accusantium 
+            culpa perferendis reprehenderit. Harum, optio ullam?<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sit vitae, quis neque maxime numquam cupiditate facere officiis consequatur ratione rerum molestiae at accusantium 
+            culpa perferendis reprehenderit. Harum, optio ullam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sit vitae, quis neque maxime numquam cupiditate facere officiis consequatur ratione rerum molestiae at accusantium 
+            culpa perferendis reprehenderit. Harum, optio ullam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sit vitae, quis neque maxime numquam cupiditate facere officiis consequatur ratione rerum molestiae at accusantium 
+            culpa perferendis reprehenderit. Harum, optio ullam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sit vitae, quis neque maxime numquam cupiditate facere officiis consequatur ratione rerum molestiae at accusantium 
+            culpa perferendis reprehenderit. Harum, optio ullam?</p>
+    </section>
+
+    <script type="text/javascript">
+    var mountain1 = document.getElementById('mountain1')
+    scroll = window.pageYOffset;
+    document.addEventListener('scroll', function (e)
+    {
+        var offset = window.pageYOffset;
+        scroll = offset;
+        mountain1.style.width = (100 + scroll/5) + '%';
+    });
+
+    var mountain2 = document.getElementById('mountain2')
+    scroll = window.pageYOffset;
+    document.addEventListener('scroll', function (e)
+    {
+        var offset = window.pageYOffset;
+        scroll = offset;
+        mountain2.style.width = (100 + scroll/5) + '%';
+        mountain2.style.left = scroll/60 + '%';
+    });
+
+    var text = document.getElementById('text')
+    scroll = window.pageYOffset;
+    document.addEventListener('scroll', function (e)
+    {
+        var offset = window.pageYOffset;
+        scroll = offset;
+        
+        text.style.bottom =  scroll/10 + '%';
+    });
+    </script>
+</body>
+</html>
